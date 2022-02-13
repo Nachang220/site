@@ -685,13 +685,13 @@ body {
   bottom: 0;
   z-index: 999;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
+  padding: 43px 15px 15px;
   background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
 }
 
 .popup-container {
+  margin: auto;
   position: relative;
   max-width: 390px;
   background-color: #fff;
@@ -1034,5 +1034,29 @@ body {
 
   .popup-container {
     padding: 30px 25px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+  .trend {
+    width: calc(25% - 3px);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
+  .trend {
+    width: calc(50% - 2px);
+  }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .trend {
+    width: calc(50% - 2px);
+  }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .trend {
+    width: 100%;
   }
 }
